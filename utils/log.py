@@ -13,7 +13,7 @@ class Logger(object):
         self._logger = logging.getLogger()
         self.formatter = logging.Formatter(fmt=LOG_FMT, datefmt=LOG_DATEFMT)
         self._logger.addHandler(self._get_file_handler(LOG_FILENAME))
-        #self._logger.addHandler(self._get_console_handler())
+        self._logger.addHandler(self._get_console_handler())
         self._logger.setLevel(LOG_LEVEL)
 
     def _get_file_handler(self, filename):

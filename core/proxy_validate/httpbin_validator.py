@@ -48,10 +48,10 @@ def _check_http_proxy(proxies, is_http=True):
         test_url = 'https://httpbin.org/get'
     try:
         start = time.time()
-        r = requests.get(url=test_url, headers=http_headers.get_request_header(), timeout=settings.TIMEOUT, proxies=proxies)
-        if r.ok:
+        response = requests.get(url=test_url, headers=http_headers.get_request_header(), proxies=proxies, timeout=settings.TIMEOUT)
+        if response.ok:
             delay = round(time.time() - start, 2)
-            content = json.loads(r.text)
+            content = json.loads(response.text)
             headers = content['headers']
             ip = content['origin']
             proxy_connection = headers.get('Proxy-Connection', None)
@@ -69,6 +69,6 @@ def _check_http_proxy(proxies, is_http=True):
         return False, nick_type, delay
 
 if __name__ == '__main__':
-    proxy = Proxy('36.248.133.204', '9999')
+    proxy = Proxy('117.185.17.16', '80')
     check_proxy(proxy)
     print(proxy)

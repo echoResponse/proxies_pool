@@ -10,4 +10,4 @@ LOG_DATEFMT = '%Y-%m-%d %H:%M:%S'
 LOG_FILENAME = 'log.log'
 
 #检测httpbin timeout时间
-TIMEOUT = 3
+TIMEOUT = 10
