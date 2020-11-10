@@ -7,11 +7,11 @@ from settings import MAX_SCROE
 #area 所属地区
 #score 分数 在settings中设置，每检测失败一次减1，-1为不可用
 class Proxy():
-    def __init__(self, ip, port, protocol=-1, nike_type=-1, delay=-1, area=None, score=MAX_SCROE, disable_domains=[]):
+    def __init__(self, ip=None, port=None, protocol=-1, nick_type=-1, delay=-1, area=None, score=MAX_SCROE, disable_domains=[]):
         self.ip = ip
         self.port = port
         self.protocol = protocol #默认为-1，
-        self.nick_type = nike_type
+        self.nick_type = nick_type
         self.delay = delay
         self.area = area
         self.score = score

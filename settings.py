@@ -11,3 +11,6 @@ LOG_FILENAME = 'log.log'
 
 #检测httpbin timeout时间
 TIMEOUT = 10
+
+#MongoDB数据库URL
+MONGO_URL = 'mongodb://127.0.0.1:27017'
