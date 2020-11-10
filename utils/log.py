@@ -1,11 +1,12 @@
 import sys
 import logging
 
+from settings import LOG_FMT
+from settings import LOG_LEVEL
+from settings import LOG_FILENAME
+from settings import LOG_DATEFMT
+
 #实现日志记录
-LOG_LEVEL = logging.INFO
-LOG_FMT = '%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s: %(message)s'
-LOG_DATEFMT = '%Y-%m-%d %H:%M:%S'
-LOG_FILENAME = 'log.log'
 
 class Logger(object):
     def __init__(self):
