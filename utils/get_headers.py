@@ -16,4 +16,4 @@ def get_headers():
 if __name__ == '__main__':
     headers = get_headers()
     for header in headers:
-        print(header)
+        print("'"+header+"',")
