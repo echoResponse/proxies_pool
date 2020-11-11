@@ -68,7 +68,7 @@ def _check_http_proxy(proxies, is_http=True):
         logger.exception(e)
         return False, nick_type, delay
 
-if __name__ == '__main__':
-    proxy = Proxy('117.185.17.16', '80')
-    check_proxy(proxy)
-    print(proxy)
+# if __name__ == '__main__':
+#     proxy = Proxy('171.35.215.219', '9999')
+#     check_proxy(proxy)
+#     print(proxy)

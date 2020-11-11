@@ -57,10 +57,10 @@ USER_AGENT = [
 def get_request_header():
     return {
         'User-Agent': random.choice(USER_AGENT),
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9.*/*;q=0.8',
-        'Accept-Language': 'en_US,en;q=0.5',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+        'Accept-Language': 'en_US,en;q=0.5,zh-CN,zh;q=0.9',
         'Connection': 'Keep-alive',
-        'Accept-Encoding': 'gzip, deflate',
+#        'Accept-Encoding': 'gzip, deflate, br',
     }
 
 # if __name__ == '__main__':
