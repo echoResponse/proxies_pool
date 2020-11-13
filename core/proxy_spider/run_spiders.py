@@ -11,11 +11,12 @@ import schedule
 import time
 from settings import RUN_SPIDER_INTERVAL
 
+
 class RunSpider(object):
 
     spider_list = [
-        'kuaiSpider', 'jiangxianSpider', 'xilaSpider',
-        'xiaohuanSpider', 'zhimaSpider', 'nimaSpider', 'qiyunSpider', 'spider89',
+        'kuaiSpider', 'jiangxianSpider', 'xilaSpider','xiaohuanSpider',
+        'zhimaSpider', 'nimaSpider', 'qiyunSpider', 'spider89',
     ]
     module_name = 'core.proxy_spider.proxy_spiders'
 

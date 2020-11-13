@@ -8,7 +8,7 @@ from utils.log import logger
 from domain import Proxy
 #快代理 https://www.kuaidaili.com/free/
 kuai_config = {
-    'urls': [ "https://www.kuaidaili.com/free/inha/{}/".format(i) for i in range(1,202) ],
+    'urls': [ "https://www.kuaidaili.com/free/inha/{}/".format(i) for i in range(1,20) ],
     'group_xpath': '//*[@id="list"]/table/tbody/tr',
     'detail_xpath': {
             'ip': './td[1]/text()',
@@ -31,7 +31,7 @@ jiangxian_config = {
 #齐云代理 https://www.7yip.cn/free/?action=china&page=1
 # //*[@id="content"]/section/div[2]/table/tbody/tr[1]
 qiyun_config = {
-    'urls': [ 'https://www.7yip.cn/free/?action=china&page={}'.format(i) for i in range(1, 41) ],
+    'urls': [ 'https://www.7yip.cn/free/?action=china&page={}'.format(i) for i in range(1, 20) ],
     'group_xpath': '//*[@id="content"]/section/div[2]/table/tbody/tr',
     'detail_xpath': {
         'ip': './td[1]/text()',
@@ -43,7 +43,7 @@ qiyun_config = {
 #89代理 https://www.89ip.cn/index_1.html
 #此代理浏览器显示xpath与实际获取不符，通过JavaScript修改
 config_89 = {
-    'urls': ['https://www.89ip.cn/index_{}.html'.format(i) for i in range(1, 100)],
+    'urls': ['https://www.89ip.cn/index_{}.html'.format(i) for i in range(1, 20)],
     'group_xpath': '//tbody/tr',
     'detail_xpath': {
         'ip': './td[1]/text()',
@@ -55,7 +55,7 @@ config_89 = {
 
 #小幻代理 https://ip.ihuan.me/address/5Lit5Zu9.html?page=1
 xiaohuan_config = {
-    'urls': ['https://ip.ihuan.me/address/5Lit5Zu9.html?page={}'.format(i) for i in range(1, 41)],
+    'urls': ['https://ip.ihuan.me/address/5Lit5Zu9.html?page={}'.format(i) for i in range(1, 20)],
     'group_xpath': '//tbody/tr',
     'detail_xpath': {
         'ip': './td[1]/a/text()',
@@ -66,7 +66,7 @@ xiaohuan_config = {
 
 #西拉代理 格式特殊 单独处理 http://www.xiladaili.com/gaoni/1/
 class xilalaSpider(object):
-    urls = [ "http://www.xiladaili.com/gaoni/{}/".format(i) for i in range(1, 201) ]
+    urls = [ "http://www.xiladaili.com/gaoni/{}/".format(i) for i in range(1, 40) ]
     group_xpath = '//html/body/div/div[3]/div[2]/table/tbody/tr'
     detail_xpath = {
         'ip_and_port':'./td[1]/text()',
@@ -114,7 +114,7 @@ class xilalaSpider(object):
 
 #尼玛 代理 与西拉代理格式相同 http://www.nimadaili.com/putong/1/
 class nimamaSpider(xilalaSpider):
-    urls = ["http://www.nimadaili.com/putong/{}/".format(i) for i in range(1, 41)]
+    urls = ["http://www.nimadaili.com/putong/{}/".format(i) for i in range(1, 20)]
     group_xpath = '//html/body/div/div[1]/div/table/tbody/tr'
     detail_xpath = {
         'ip_and_port': './td[1]/text()',
@@ -172,5 +172,5 @@ spider89 = BaseSpider(**config_89)
 xiaohuanSpider = BaseSpider(**xiaohuan_config)
 
 if __name__ == '__main__':
-    for i in spider89.get_proxies():
+    for i in kuaiSpider.get_proxies():
         print(i)

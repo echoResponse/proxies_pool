@@ -20,3 +20,6 @@ RUN_SPIDER_INTERVAL = 2
 
 #从数据库崎岖检测时间,单位为小时
 CHECK_TIME = 1
+
+#指定异步数量
+ASYNC_NUM = 10
