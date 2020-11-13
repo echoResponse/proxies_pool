@@ -36,7 +36,7 @@ def check_proxy(proxy):
         proxy.protocol = -1
         proxy.nick_type = -1
         proxy.delay = -1
-    logger.debug(proxy)
+    #logger.debug(proxy)
     return proxy
 
 def _check_http_proxy(proxies, is_http=True):
@@ -65,7 +65,7 @@ def _check_http_proxy(proxies, is_http=True):
         else:
             return False, nick_type, delay
     except Exception as e:
-        logger.exception(e)
+        #logger.exception(e)
         return False, nick_type, delay
 
 # if __name__ == '__main__':

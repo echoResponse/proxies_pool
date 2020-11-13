@@ -14,3 +14,9 @@ TIMEOUT = 10
 
 #MongoDB数据库URL
 MONGO_URL = 'mongodb://127.0.0.1:27017'
+
+#爬虫运行时间间隔,单位为小时
+RUN_SPIDER_INTERVAL = 2
+
+#从数据库崎岖检测时间,单位为小时
+CHECK_TIME = 1
