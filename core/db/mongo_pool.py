@@ -79,7 +79,7 @@ class MongoPool():
         '''
         conditions = {'nick_type': nick_type}
         if protocol is None:
-            conditions['protocol'] = 2
+            conditions['protocol'] = {'$in': [0, 1, 2]}
         elif protocol.lower() == 'http':
             conditions['protocol'] = {'$in': [0, 2]}
         else:
@@ -115,8 +115,8 @@ class MongoPool():
         return False
 
 
-# if __name__ == '__main__':
-#     mongo = MongoPool()
-#     for mongod in mongo.get_proxies(nick_type=-1,protocol=''):
-#         print(mongod)
-#     mongo.__del__()
+if __name__ == '__main__':
+    mongo = MongoPool()
+    for mongod in mongo.get_proxies():
+        print(mongod)
+    mongo.__del__()

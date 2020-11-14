@@ -23,3 +23,6 @@ CHECK_TIME = 1
 
 #指定异步数量
 ASYNC_NUM = 10
+
+#api获取最大代理数量,值越小，可用性越高，随机性越差
+API_COUNT = 20
